@@ -1,0 +1,207 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "787e530e-f439-4fae-8f5c-155c7314bf5b")
+	(paper "A4")
+	(title_block
+		(title "ESP32 Ethernet <-> DECT NR+ Gateway (nRF9151)")
+		(date "2026-04-20")
+		(rev "A0")
+		(comment 1 "MVP: PoE 802.3af + USB-C + ESP32 + W5500 + nRF9151")
+		(comment 2 "Host link options: UART or SPI")
+		(comment 3 "PCB target: 70 mm x 50 mm")
+		(comment 4 "USB PC port: power + UART debug + auto-programming")
+	)
+	(lib_symbols)
+	(sheet
+		(at 15.24 20.32)
+		(size 55.88 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f9518f77-ab32-43d8-b6ee-33ba72ec18e3")
+		(property "Sheetname" "power_poe"
+			(at 15.24 19.5575 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_poe.kicad_sch"
+			(at 15.24 56.3249 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/787e530e-f439-4fae-8f5c-155c7314bf5b"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 76.2 20.32)
+		(size 55.88 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6727679f-52b7-4774-bab0-18a3ae343313")
+		(property "Sheetname" "esp32_eth"
+			(at 76.2 19.5575 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esp32_eth.kicad_sch"
+			(at 76.2 56.3249 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/787e530e-f439-4fae-8f5c-155c7314bf5b"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 137.16 20.32)
+		(size 55.88 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5c723d00-55a9-4baa-a5c3-125d22313152")
+		(property "Sheetname" "nrf9151_iface"
+			(at 137.16 19.5575 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "nrf9151_iface.kicad_sch"
+			(at 137.16 56.3249 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/787e530e-f439-4fae-8f5c-155c7314bf5b"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 137.16 62.23)
+		(size 55.88 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6fb5699f-c5af-4f57-bec5-6f720662a16e")
+		(property "Sheetname" "usb_pc_iface"
+			(at 137.16 61.4675 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_pc_iface.kicad_sch"
+			(at 137.16 98.2349 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/787e530e-f439-4fae-8f5c-155c7314bf5b"
+					(page "5")
+				)
+			)
+		)
+	)
+	(text "Arquitectura MVP: PoE PD 802.3af -> 5V -> 3V3. ESP32 controla W5500 (SPI) y nRF9151 (UART o SPI)."
+		(at 15.24 76.20 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "90c72be2-1516-41f9-a356-e9a28fbbce31")
+	)
+	(text "Excluido en esta version: LTE operativo, LoRa, SDI-12, RS-485, 4-20 mA, pulsos, GPS, bateria/solar."
+		(at 15.24 79.375 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f2fa6862-600a-43ec-b940-8d5b8c98d01f")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

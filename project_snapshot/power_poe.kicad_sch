@@ -1,0 +1,534 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "d8d8a9bf-3aae-4542-876b-0c915407cfc6")
+	(paper "A4")
+	(title_block
+		(title "PoE 802.3af + Power Tree")
+		(date "2026-04-20")
+	)
+	(lib_symbols
+		(symbol "RJ45_POE_MAG"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J" (at 0 11.43 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "RJ45_PoE_MagJack" (at 0 -11.43 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "RJ45 with magnetics and PoE center taps" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "RJ45_POE_MAG_0_1"
+				(rectangle (start -12 8.89) (end 12 -8.89) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "RJ45_POE_MAG_1_1"
+				(pin passive line (at -17.78 6.35 0) (length 5.08) (name "TXP" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 3.81 0) (length 5.08) (name "TXN" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 1.27 0) (length 5.08) (name "RXP" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -1.27 0) (length 5.08) (name "RXN" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 6.35 180) (length 5.08) (name "POE_VP" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 3.81 180) (length 5.08) (name "POE_VN" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 1.27 180) (length 5.08) (name "SHIELD" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+			)
+		)
+		(symbol "POE_PD_AG9905M"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U" (at 0 11.43 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "Ag9905M" (at 0 -11.43 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "Silvertel PoE PD module, 5V output" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "POE_PD_AG9905M_0_1"
+				(rectangle (start -12 10.16) (end 12 -10.16) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "POE_PD_AG9905M_1_1"
+				(pin passive line (at -17.78 8.89 0) (length 5.08) (name "+VDC_1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 6.35 0) (length 5.08) (name "+VDC_2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 3.81 0) (length 5.08) (name "-VDC" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 1.27 0) (length 5.08) (name "ADJ" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 8.89 180) (length 5.08) (name "VIN+_1" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 6.35 180) (length 5.08) (name "VIN+_2" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 3.81 180) (length 5.08) (name "VIN-_1" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 1.27 180) (length 5.08) (name "VIN-_2" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+			)
+		)
+		(symbol "BUCK_R78B"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "R-78B3.3-2.0" (at 0 -7.62 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "RECOM buck regulator 3.3V/2A" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "BUCK_R78B_0_1"
+				(rectangle (start -12 5.08) (end 12 -5.08) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "BUCK_R78B_1_1"
+				(pin passive line (at -17.78 2.54 0) (length 5.08) (name "VIN" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 0 0) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 1.27 180) (length 5.08) (name "VOUT" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+			)
+		)
+	)
+	(symbol
+		(lib_id "RJ45_POE_MAG")
+		(at 50.80 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb0ec1c3-4745-4522-b336-ba55375cea6f")
+		(property "Reference" "J1" (at 50.80 77.47 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "RJ45_POE" (at 50.80 54.61 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "RJ45_POE_MAG_PLACEHOLDER" (at 50.80 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 50.80 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "RJ45 with magnetics" (at 50.80 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "6c079aec-de92-4ff3-83ef-8512ba930125"))
+		(pin "2" (uuid "f61039e0-b616-42ce-ae3b-de6416bc048f"))
+		(pin "3" (uuid "4994f3ee-fafb-4a9f-885d-b8fa689caa08"))
+		(pin "4" (uuid "762ff6d6-9d4d-443b-a6a8-941ff4e60a7a"))
+		(pin "5" (uuid "6a40de3b-8f29-482c-91da-3c26de1db4e7"))
+		(pin "6" (uuid "513852fb-252e-4740-96ed-f89591d10505"))
+		(pin "7" (uuid "0006730d-a248-4466-823b-a1038ead39b7"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/d8d8a9bf-3aae-4542-876b-0c915407cfc6" (reference "J1") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "POE_PD_AG9905M")
+		(at 111.76 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ef102d2a-6d97-4305-bbaa-84a32737275f")
+		(property "Reference" "U4" (at 111.76 78.74 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "Ag9905M" (at 111.76 53.34 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "POE_PD_8023AF_PLACEHOLDER" (at 111.76 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "https://silvertel.com/images/datasheets/Ag9900M-datasheet-ultra-miniature-isolated-Power-over-Ethernet-POE-module.pdf" (at 111.76 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "PoE PD module 5V output" (at 111.76 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "eae38323-0972-4bf9-9ea3-2d02f0a8e116"))
+		(pin "2" (uuid "658e86b3-f8c7-4d46-8bba-a0f3f07917ac"))
+		(pin "3" (uuid "c53e0496-6d15-47ad-8f77-21709489e75f"))
+		(pin "4" (uuid "6bcacc39-6ed1-443c-8560-156e1b1c4aa4"))
+		(pin "5" (uuid "c6ae3899-b5b2-442e-9d0f-16dd6a185c55"))
+		(pin "6" (uuid "5e8f245b-60b1-4a4e-b00b-05d11cd5a0c5"))
+		(pin "7" (uuid "228cf009-b2c1-49ad-9331-5da085e55138"))
+		(pin "8" (uuid "e25e7f20-734e-4ccd-b4fe-f602081a79bc"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/d8d8a9bf-3aae-4542-876b-0c915407cfc6" (reference "U4") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "BUCK_R78B")
+		(at 165.10 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f22a914c-adcd-4147-aa04-06d23134dab6")
+		(property "Reference" "U5" (at 165.10 74.93 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "R-78B3.3-2.0" (at 165.10 57.15 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "BUCK_5V3V3_PLACEHOLDER" (at 165.10 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "https://www.recom-power.com/pdf/Innoline/R-78Bxx-2.0.pdf" (at 165.10 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Buck 3.3V/2A" (at 165.10 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "11e69f2c-c7dc-4a95-9cb9-c04863db53ed"))
+		(pin "2" (uuid "e9a8d76d-95ed-48c7-9496-c7b76b4dcc29"))
+		(pin "3" (uuid "0eab08d2-e0dd-4cb8-b1dc-5092d8e5ad02"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/d8d8a9bf-3aae-4542-876b-0c915407cfc6" (reference "U5") (unit 1))
+			)
+		)
+	)
+	(global_label "ETH_TXP"
+		(shape bidirectional)
+		(at 33.02 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9972ed7b-b236-4c4d-95a5-d54bd861f7e2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ETH_TXN"
+		(shape bidirectional)
+		(at 33.02 62.23 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "659e3575-1c79-4b34-8175-ee3781a28825")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 62.23 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ETH_RXP"
+		(shape bidirectional)
+		(at 33.02 64.77 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0440c615-9120-476b-8118-170027c91701")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 64.77 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ETH_RXN"
+		(shape bidirectional)
+		(at 33.02 67.31 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ecfdb6eb-1a0a-4bc7-bb04-525f6c68d9a1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 33.02 67.31 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "POE_VP"
+		(shape bidirectional)
+		(at 68.58 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1d474bce-f9a6-4069-821c-f564ee8dcdf7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.58 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "POE_VN"
+		(shape bidirectional)
+		(at 68.58 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1321a5c4-25e6-408c-a8e1-59f8a9cc5a11")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.58 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "CHASSIS_GND"
+		(shape bidirectional)
+		(at 68.58 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0b9c9d25-6357-4d80-a37c-9c1cb29009b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.58 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "+5V_POE"
+		(shape bidirectional)
+		(at 93.98 57.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5899d033-d308-464d-9285-c5553062d93e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 57.15 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "+5V_POE"
+		(shape bidirectional)
+		(at 93.98 59.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d2c79e1c-c6b7-46d9-bc64-44db001c2a26")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 59.69 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 93.98 62.23 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "169bd505-9c09-44b1-8b34-429556a8ef6b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.98 62.23 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "POE_VP"
+		(shape bidirectional)
+		(at 129.54 57.15 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "31d8feef-1ab1-4c95-b8fc-5b944b44271b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "POE_VP"
+		(shape bidirectional)
+		(at 129.54 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93715a53-468c-488b-88fe-b738ca62a8fb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "POE_VN"
+		(shape bidirectional)
+		(at 129.54 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4fc59984-7e4b-4bae-8d50-c52b8be24ccf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "POE_VN"
+		(shape bidirectional)
+		(at 129.54 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f0f6ea52-565b-45e4-8f3e-1a1b1c775925")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "+5V_POE"
+		(shape bidirectional)
+		(at 147.32 63.50 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cf31e51e-8bb7-4f0d-99d8-d33455ffbcbc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 63.50 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 147.32 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a6f5d016-3158-47c3-ae3b-ef019b3ddb6f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 147.32 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "+3V3_SYS"
+		(shape bidirectional)
+		(at 182.88 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "41d7d07f-b791-4021-9a76-da4aa9278d36")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 182.88 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(no_connect
+		(at 93.98 64.77)
+		(uuid "e744aa8d-8b5e-4c8b-a071-04b31f8280d3")
+	)
+	(text "Cadena minima: RJ45 PoE -> Ag9905M (PD) -> +5V_POE -> R-78B3.3-2.0 -> +3V3_SYS"
+		(at 20.32 20.32 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "4a7c9729-176f-4fac-898e-305feabab15c")
+	)
+	(text "Nota: si J1 no integra rectificacion PoE completa, agregar puente de diodos segun datasheet Ag9900M."
+		(at 20.32 23.495 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "e84e223e-5a19-4416-bcf8-2ab11c5a47f3")
+	)
+	(sheet_instances
+		(path "/"
+			(page "2")
+		)
+	)
+	(embedded_fonts no)
+)

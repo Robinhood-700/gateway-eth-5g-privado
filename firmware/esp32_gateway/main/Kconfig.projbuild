@@ -1,0 +1,189 @@
+menu "Gateway MVP configuration"
+
+choice GW_DECT_HOST_IF
+    prompt "nRF9151 host interface"
+    default GW_DECT_HOST_IF_SPI
+    help
+        Selects ESP32 host interface towards nRF9151 modem/bridge firmware.
+
+    config GW_DECT_HOST_IF_UART
+        bool "UART"
+
+    config GW_DECT_HOST_IF_SPI
+        bool "SPI"
+endchoice
+
+config GW_UDP_LISTEN_PORT
+    int "UDP listen port (Ethernet RX)"
+    range 1 65535
+    default 5000
+
+config GW_UDP_REMOTE_PORT
+    int "UDP remote port (Ethernet TX)"
+    range 1 65535
+    default 5000
+
+config GW_UDP_REMOTE_IP
+    string "UDP fixed remote IPv4 (empty = last sender)"
+    default ""
+
+config GW_MAX_PAYLOAD_LEN
+    int "Maximum payload length"
+    range 128 2048
+    default 512
+
+config GW_ETH_RESTART_SEC
+    int "Ethernet restart timeout (seconds)"
+    range 3 120
+    default 12
+
+config GW_DECT_AT_TIMEOUT_MS
+    int "DECT AT timeout (ms)"
+    range 200 10000
+    default 1500
+
+config GW_SUPERVISOR_PERIOD_MS
+    int "Supervisor polling period (ms)"
+    range 200 10000
+    default 1000
+
+config GW_ETH_SPI_CLOCK_MHZ
+    int "W5500 SPI clock (MHz)"
+    range 1 36
+    default 18
+
+config GW_ETH_SPI_MISO_GPIO
+    int "W5500 MISO GPIO"
+    default 19
+
+config GW_ETH_SPI_MOSI_GPIO
+    int "W5500 MOSI GPIO"
+    default 23
+
+config GW_ETH_SPI_SCLK_GPIO
+    int "W5500 SCLK GPIO"
+    default 18
+
+config GW_ETH_SPI_CS_GPIO
+    int "W5500 CS GPIO"
+    default 21
+
+config GW_ETH_INT_GPIO
+    int "W5500 INT GPIO"
+    default 22
+
+config GW_ETH_RST_GPIO
+    int "W5500 RST GPIO"
+    default 2
+
+config GW_DECT_RST_GPIO
+    int "nRF9151 RST GPIO"
+    default 4
+
+config GW_DECT_IRQ_GPIO
+    int "nRF9151 IRQ GPIO"
+    default 27
+
+if GW_DECT_HOST_IF_UART
+config GW_DECT_UART_PORT_NUM
+    int "nRF9151 UART port"
+    range 1 2
+    default 2
+
+config GW_DECT_UART_BAUDRATE
+    int "nRF9151 UART baudrate"
+    range 9600 2000000
+    default 115200
+
+config GW_DECT_UART_TX_GPIO
+    int "nRF9151 UART TX GPIO"
+    default 17
+
+config GW_DECT_UART_RX_GPIO
+    int "nRF9151 UART RX GPIO"
+    default 16
+endif
+
+if GW_DECT_HOST_IF_SPI
+config GW_DECT_SPI_CLOCK_MHZ
+    int "nRF9151 SPI clock (MHz)"
+    range 1 20
+    default 4
+
+config GW_DECT_SPI_MISO_GPIO
+    int "nRF9151 SPI MISO GPIO"
+    default 34
+
+config GW_DECT_SPI_MOSI_GPIO
+    int "nRF9151 SPI MOSI GPIO"
+    default 32
+
+config GW_DECT_SPI_SCLK_GPIO
+    int "nRF9151 SPI SCLK GPIO"
+    default 25
+
+config GW_DECT_SPI_CS_GPIO
+    int "nRF9151 SPI CS GPIO"
+    default 33
+
+config GW_DECT_SPI_POLL_BYTES
+    int "SPI poll bytes per cycle"
+    range 8 256
+    default 64
+endif
+
+config GW_DECT_TX_PREFIX
+    string "Prefix AT/bridge for uplink (empty = raw JSON line)"
+    default "AT+DATA="
+
+config GW_DECT_RX_PREFIX
+    string "Prefix URC for downlink payload"
+    default "+DATA:"
+
+config GW_USB_DEBUG_ENABLE
+    bool "Enable USB debug CLI (stdin over USB-UART)"
+    default y
+
+config GW_USB_DEBUG_TASK_STACK
+    int "USB debug CLI task stack"
+    range 3072 16384
+    default 6144
+
+config GW_USB_DEBUG_TASK_PRIO
+    int "USB debug CLI task priority"
+    range 1 20
+    default 7
+
+config GW_POE_PGOOD_GPIO
+    int "PoE power-good GPIO (-1 disables check)"
+    range -1 48
+    default -1
+
+config GW_POE_PGOOD_ACTIVE_LEVEL
+    int "PoE power-good active level"
+    range 0 1
+    default 1
+
+config GW_EXAMPLE_RANDOM_ENABLE
+    bool "Enable random traffic example tasks"
+    default y
+
+config GW_EXAMPLE_RANDOM_PERIOD_MS
+    int "Random example period (ms)"
+    range 200 60000
+    default 3000
+    depends on GW_EXAMPLE_RANDOM_ENABLE
+
+config GW_EXAMPLE_RANDOM_ETH_BURST
+    int "Random ETH->DECT packets per period"
+    range 1 100
+    default 3
+    depends on GW_EXAMPLE_RANDOM_ENABLE
+
+config GW_EXAMPLE_RANDOM_DECT_BURST
+    int "Random DECT->ETH packets per period"
+    range 1 100
+    default 3
+    depends on GW_EXAMPLE_RANDOM_ENABLE
+
+endmenu

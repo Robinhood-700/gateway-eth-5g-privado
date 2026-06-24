@@ -1,0 +1,1333 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "b20ac0e4-1731-4b3a-ae48-78fb4646aba6")
+	(paper "A4")
+	(title_block
+		(title "nRF9151 Interface (UART + SPI + HW Select)")
+		(date "2026-04-20")
+	)
+	(lib_symbols
+		(symbol "NRF9151_DUAL_IF"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U" (at 0 12.70 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "nRF9151-SiP" (at 0 -12.70 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "nRF9151 for DECT NR+ controlled by ESP32" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "NRF9151_DUAL_IF_0_1"
+				(rectangle (start -12 11.43) (end 12 -11.43) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "NRF9151_DUAL_IF_1_1"
+				(pin passive line (at -17.78 10.16 0) (length 5.08) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 7.62 0) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 5.08 0) (length 5.08) (name "UART_RX" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 2.54 0) (length 5.08) (name "UART_TX" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 0 0) (length 5.08) (name "UART_CTS" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -2.54 0) (length 5.08) (name "UART_RTS" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -5.08 0) (length 5.08) (name "SPI_SCLK" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -7.62 0) (length 5.08) (name "SPI_MISO" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -10.16 0) (length 5.08) (name "SPI_MOSI" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at -17.78 -12.70 0) (length 5.08) (name "SPI_CSN" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 7.62 180) (length 5.08) (name "IRQ" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 5.08 180) (length 5.08) (name "RESET_N" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 2.54 180) (length 5.08) (name "DECT_RF" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 0 180) (length 5.08) (name "SWDIO" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 -2.54 180) (length 5.08) (name "SWDCLK" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 -5.08 180) (length 5.08) (name "PWR_EN" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))
+			)
+		)
+		(symbol "SMA_RF"
+			(pin_names (offset 1.016))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "SMA_RF" (at 0 -5.08 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "SMA connector" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "SMA_RF_0_1"
+				(rectangle (start -12 2.54) (end 12 -2.54) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "SMA_RF_1_1"
+				(pin passive line (at -17.78 0 0) (length 5.08) (name "SIG" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 17.78 0 180) (length 5.08) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+			)
+		)
+		(symbol "SJ_LINK"
+			(pin_names (offset 0.8))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SJ" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "0R_MOUNTED" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "2-pad solder jumper" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(symbol "SJ_LINK_0_1"
+				(rectangle (start -5.08 2.54) (end 5.08 -2.54) (stroke (width 0.254) (type default)) (fill (type background)))
+			)
+			(symbol "SJ_LINK_1_1"
+				(pin passive line (at -10.16 0 0) (length 5.08) (name "A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+				(pin passive line (at 10.16 0 180) (length 5.08) (name "B" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+			)
+		)
+	)
+	(symbol
+		(lib_id "NRF9151_DUAL_IF")
+		(at 88.90 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "10cb31ad-5b74-4031-9fe1-77f2995b7c8f")
+		(property "Reference" "U3" (at 88.90 80.01 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "nRF9151-SICA" (at 88.90 50.80 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "NRF9151_SIP_PLACEHOLDER" (at 88.90 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 88.90 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "nRF9151 for DECT NR+" (at 88.90 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "46f563ce-b795-4659-a143-d74220754b08"))
+		(pin "2" (uuid "19733dd3-dd3a-460b-9bc8-4a90e2ea2656"))
+		(pin "3" (uuid "e8983bc9-7a2f-4446-9887-fde5417bd8f6"))
+		(pin "4" (uuid "9d534ff4-6cbb-40d8-a114-14649a775ccd"))
+		(pin "5" (uuid "9baf6832-e490-4bc1-9f40-45151c94fb5a"))
+		(pin "6" (uuid "f1cdf800-ff1a-4942-8634-86a8b5d39433"))
+		(pin "7" (uuid "24069ab4-9089-4416-bb91-636e3c58f538"))
+		(pin "8" (uuid "cf0e5544-aa17-475a-943d-9f48abf30f9d"))
+		(pin "9" (uuid "d5d4c21d-c3a7-4ce0-802e-d21fdd9fce17"))
+		(pin "10" (uuid "b35d8e62-d7d1-4f27-8914-5039907fc55d"))
+		(pin "11" (uuid "cda58602-b2ea-43c2-99bf-9ef1482b8666"))
+		(pin "12" (uuid "3dcf724e-ee7c-4877-9087-2b4e7d45cba4"))
+		(pin "13" (uuid "676c4fa6-b2f4-4cac-b11b-97130dbeae00"))
+		(pin "14" (uuid "da50313f-24fe-4adb-8996-189827dd5996"))
+		(pin "15" (uuid "ee20c660-53b6-4225-bd35-ec0201e4e688"))
+		(pin "16" (uuid "bebd2359-43c3-4c13-8dae-a49858749c54"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "U3") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SMA_RF")
+		(at 180.34 68.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72377782-abb6-47a7-9029-5e306de782c1")
+		(property "Reference" "J3" (at 180.34 74.93 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "SMA_EXT_OMNI" (at 180.34 62.23 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "gateway_min_local:SMA_RF_PLACEHOLDER" (at 180.34 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 180.34 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "SMA connector" (at 180.34 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "0a60f7d5-6176-47c1-8739-95e1a707d0fb"))
+		(pin "2" (uuid "a01e1414-76e2-4354-b66b-6eccda87a8b3"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "J3") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7369caca-bde6-4d04-be8e-b927aeeebe23")
+		(property "Reference" "SJ101" (at 139.70 90.93 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 139.70 81.79 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 86.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "fdd92271-1f7c-43da-98d1-34f973d3a971"))
+		(pin "2" (uuid "e6d3bf08-8da2-4cee-ac36-544ac27ea6bc"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ101") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "326d6155-28de-4d8c-8d13-6cbed1d0e833")
+		(property "Reference" "SJ102" (at 139.70 87.12 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 139.70 77.98 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 82.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 82.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 82.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "9e0ee388-f033-4446-968c-cf04d49c2dad"))
+		(pin "2" (uuid "0ba043dd-babd-44a5-9bfa-f1824cf8cd50"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ102") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b23121a2-bf69-4301-823e-e25c5942f58f")
+		(property "Reference" "SJ103" (at 139.70 83.31 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 139.70 74.17 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "2116706e-5111-4a07-a22c-c72ccd80744d"))
+		(pin "2" (uuid "7820ca8d-ca99-4e1f-bf09-7b96e30163be"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ103") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31b03fe1-1dd1-425f-a7c2-e9c5a065c344")
+		(property "Reference" "SJ104" (at 139.70 79.50 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 139.70 70.36 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "cb8c5dd1-35a8-4593-b7f0-5269204310df"))
+		(pin "2" (uuid "0dcb9a20-9db6-49f2-9393-6912f546d789"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ104") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "59b73af6-6cfd-4fa7-a2d7-1e9bd62fe67d")
+		(property "Reference" "SJ201" (at 139.70 70.61 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "0R_MOUNTED" (at 139.70 61.47 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "84b0230b-62d8-498d-9696-3c7081202064"))
+		(pin "2" (uuid "675712ed-1e40-4fbd-8215-9aeb1a5760ac"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ201") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 62.23 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4f12eddd-991d-43db-9f9a-adf04530a17e")
+		(property "Reference" "SJ202" (at 139.70 66.80 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "0R_MOUNTED" (at 139.70 57.66 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 62.23 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "ca8a840b-ce22-4adb-8806-2ea0c723ea48"))
+		(pin "2" (uuid "db2a123f-f3fc-4d9a-81a7-b5eb16296b72"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ202") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 139.70 58.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3744e7b9-94cb-4cd7-82e8-49b39e792b07")
+		(property "Reference" "SJ203" (at 139.70 62.99 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "0R_MOUNTED" (at 139.70 53.85 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "3e9102f7-9c37-41f8-9d07-460d5d3817db"))
+		(pin "2" (uuid "1d3a4136-bd6c-4e6c-8f01-a8b2a032e473"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ203") (unit 1))
+			)
+		)
+	)
+		(symbol
+			(lib_id "SJ_LINK")
+			(at 139.70 54.61 0)
+			(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7135ee50-6ad3-4728-b833-89417801ea73")
+		(property "Reference" "SJ204" (at 139.70 59.18 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "0R_MOUNTED" (at 139.70 50.04 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "SJ_2PAD_PLACEHOLDER" (at 139.70 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 139.70 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "Interface link jumper" (at 139.70 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "c186353b-9a61-4785-9fe9-16126b7c9a5e"))
+		(pin "2" (uuid "26e15d4a-d4dc-4b6d-9d93-5ab2f9f48c05"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "SJ204") (unit 1))
+				)
+			)
+		)
+		(symbol
+			(lib_id "SJ_LINK")
+			(at 116.84 66.04 0)
+			(unit 1)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(dnp no)
+			(uuid "ead1a2c6-3cc3-4cb5-be1d-d5976e2a2c7f")
+			(property "Reference" "TP301" (at 116.84 70.61 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "TP_SWDIO_GND" (at 116.84 61.47 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "PASSIVE_2PAD_PLACEHOLDER" (at 116.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 116.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "SWD test pads (signal+GND)" (at 116.84 66.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(pin "1" (uuid "7ce423db-3f3a-4238-9bcb-9a44f3dc7666"))
+			(pin "2" (uuid "ab80c83f-0a53-41a5-a2ff-90c50330df00"))
+			(instances
+				(project "esp32_eth_dect_nrf9151_gateway_min"
+					(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "TP301") (unit 1))
+				)
+			)
+		)
+		(symbol
+			(lib_id "SJ_LINK")
+			(at 116.84 68.58 0)
+			(unit 1)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(dnp no)
+			(uuid "a91e8e1b-538f-4607-8910-a5e8a33af2a0")
+			(property "Reference" "TP302" (at 116.84 73.15 0) (effects (font (size 1.27 1.27))))
+			(property "Value" "TP_SWDCLK_GND" (at 116.84 64.01 0) (effects (font (size 1.27 1.27))))
+			(property "Footprint" "PASSIVE_2PAD_PLACEHOLDER" (at 116.84 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Datasheet" "~" (at 116.84 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(property "Description" "SWD test pads (signal+GND)" (at 116.84 68.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+			(pin "1" (uuid "79cc0ea2-167f-4289-aa52-9b6c7b9f94ab"))
+			(pin "2" (uuid "0a6f2eeb-5795-46b7-8e52-3966bb2aaaf4"))
+			(instances
+				(project "esp32_eth_dect_nrf9151_gateway_min"
+					(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "TP302") (unit 1))
+				)
+			)
+		)
+		(symbol
+			(lib_id "SJ_LINK")
+			(at 180.34 81.28 0)
+			(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13380898-9185-45f0-a366-e6e9ccacfa68")
+		(property "Reference" "C301" (at 180.34 85.85 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 180.34 76.71 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "gateway_min_local:C_0402_1005Metric_RF" (at 180.34 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 180.34 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "RF shunt capacitor (matching)" (at 180.34 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "67877e77-cc17-417e-ad79-681a87faa77c"))
+		(pin "2" (uuid "645d43a8-9884-4900-a197-e427f7bbe1bc"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "C301") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 180.34 76.20 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f708fe04-3cc3-4d17-9e71-5271ed86bc00")
+		(property "Reference" "L301" (at 180.34 80.77 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "0R_MOUNTED" (at 180.34 71.63 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "Inductor_SMD:L_0402_1005Metric" (at 180.34 76.20 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 180.34 76.20 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "RF series inductor (matching)" (at 180.34 76.20 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "b298a894-d98c-4ec7-98e9-d503c86fc81a"))
+		(pin "2" (uuid "adb6e528-0838-4e3e-a0b1-66beae06007b"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "L301") (unit 1))
+			)
+		)
+	)
+	(symbol
+		(lib_id "SJ_LINK")
+		(at 180.34 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "100a668f-63b6-4b62-bbd7-140323386877")
+		(property "Reference" "C302" (at 180.34 75.69 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "DNP" (at 180.34 66.55 0) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "gateway_min_local:C_0402_1005Metric_RF" (at 180.34 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Datasheet" "~" (at 180.34 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Description" "RF shunt capacitor (matching)" (at 180.34 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(pin "1" (uuid "35570858-57ba-4b1d-bef5-27c83ea2cac4"))
+		(pin "2" (uuid "2217ca87-0762-4101-a76f-3c9dc4da0d18"))
+		(instances
+			(project "esp32_eth_dect_nrf9151_gateway_min"
+				(path "/b20ac0e4-1731-4b3a-ae48-78fb4646aba6" (reference "C302") (unit 1))
+			)
+		)
+	)
+	(global_label "DECT_RF"
+		(shape bidirectional)
+		(at 170.18 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "52f80524-93ec-472f-9def-2435220f0d80")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.18 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 190.50 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "55076fe8-fa71-4bd8-a9c3-9522b8c60346")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.50 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "DECT_RF"
+		(shape bidirectional)
+		(at 170.18 76.20 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "200321f3-8b66-439d-9d54-1358b82bd87e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.18 76.20 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "DECT_RF_ANT"
+		(shape bidirectional)
+		(at 190.50 76.20 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dffba952-c61d-46b2-abdf-7e79986bc7a2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.50 76.20 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "DECT_RF_ANT"
+		(shape bidirectional)
+		(at 170.18 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d88ed2fb-da7a-42af-9c79-086e5b334200")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 170.18 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 190.50 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1c3ff4f7-37d1-4a65-86a0-6b457b5d0c0f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.50 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "+3V3_SYS"
+		(shape bidirectional)
+		(at 71.12 55.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4f5fb101-4531-4f48-ba28-3468fc3000de")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 55.88 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 71.12 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "07a8bfba-a804-41e4-96ae-9ec458e639c8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 58.42 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_RX"
+		(shape bidirectional)
+		(at 71.12 60.96 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3d729598-aea9-43c2-94ac-ed1c2f3cf248")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 60.96 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_TX"
+		(shape bidirectional)
+		(at 71.12 63.50 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "94b83d0d-7c97-46ba-b390-1e32a92e7ff7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 63.50 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_CTS"
+		(shape bidirectional)
+		(at 71.12 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0bdee75e-1acd-4efe-84cb-af7fda1624ce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_RTS"
+		(shape bidirectional)
+		(at 71.12 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "06796a02-03db-4739-92af-0103275865b1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_SCLK"
+		(shape bidirectional)
+		(at 71.12 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "50992c3f-b3a6-4a54-af91-ba38914cda28")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 71.12 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_MISO"
+		(shape bidirectional)
+		(at 71.12 73.66 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5efbc7e4-77a6-4101-9b5a-499f279068ec")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 73.66 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_MOSI"
+		(shape bidirectional)
+		(at 71.12 76.20 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d05a6dda-7038-4e35-b605-1ef935b7afed")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 76.20 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_CSN"
+		(shape bidirectional)
+		(at 71.12 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c992a89-a4af-44f0-a87f-b4e023a0227b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 71.12 78.74 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_IRQ"
+		(shape bidirectional)
+		(at 106.68 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50089529-1798-4984-bc8d-43893e8bc473")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "NRF_RST_N"
+		(shape bidirectional)
+		(at 106.68 60.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6278b8ee-3a88-4791-b24e-9bb55565317d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "DECT_RF"
+		(shape bidirectional)
+		(at 106.68 63.50 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "69bcfbed-c355-4981-bf3e-840e472c62b4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 63.50 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SWDIO"
+		(shape bidirectional)
+		(at 106.68 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bb7ad8c8-874e-40b4-b5b5-9c199605e311")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+		(global_label "SWDCLK"
+			(shape bidirectional)
+			(at 106.68 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f6ac11bd-49cf-430a-a7e3-59cae53cc98b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				)
+			)
+		)
+		(global_label "SWDIO"
+			(shape bidirectional)
+			(at 127.00 66.04 0)
+			(fields_autoplaced yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a0063655-68d6-4131-8b1e-89a40fa2d3e6")
+			(property "Intersheetrefs" "${INTERSHEET_REFS}"
+				(at 127.00 66.04 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+		)
+		(global_label "SWDCLK"
+			(shape bidirectional)
+			(at 127.00 68.58 0)
+			(fields_autoplaced yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b051d87c-fb8a-439c-954a-01f9f0177b83")
+			(property "Intersheetrefs" "${INTERSHEET_REFS}"
+				(at 127.00 68.58 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+		)
+		(global_label "+3V3_SYS"
+			(shape bidirectional)
+			(at 106.68 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b77e78f1-586a-4df7-b037-41b75099af83")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.68 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "DECT_RF_ANT"
+		(shape bidirectional)
+		(at 162.56 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f02f2958-3a38-4ebb-97f8-5f7201dfa83a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.56 68.58 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape bidirectional)
+		(at 198.12 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3adbcf5a-1ded-4f1f-8e83-af06ca471ffd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 198.12 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_TX_NRF_RX"
+		(shape bidirectional)
+		(at 129.54 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bcabef18-6224-496a-bbf1-dc853ffdbba0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 86.36 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_RX"
+		(shape bidirectional)
+		(at 149.86 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4d15c79b-6313-4cdb-8a7c-5dd715ee18a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_RX_NRF_TX"
+		(shape bidirectional)
+		(at 129.54 82.55 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2222feae-6c21-4839-a9aa-b03cbce62149")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_TX"
+		(shape bidirectional)
+		(at 149.86 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "38032dda-ffc2-4a39-bdd0-fe5c1e12e32b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_RTS_NRF_CTS"
+		(shape bidirectional)
+		(at 129.54 78.74 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8e815943-0b53-4eef-8458-144dd56fcdaa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 78.74 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_CTS"
+		(shape bidirectional)
+		(at 149.86 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0cf50071-2e9b-4b38-b666-94e2a3753573")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_CTS_NRF_RTS"
+		(shape bidirectional)
+		(at 129.54 74.93 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0e2d452b-bea3-4c06-964f-b6933d4ca33f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 74.93 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_UART_RTS"
+		(shape bidirectional)
+		(at 149.86 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7d621f4-99eb-499a-9a04-5a449d98920c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_SPI2_SCLK"
+		(shape bidirectional)
+		(at 129.54 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fc63e332-a90c-49b4-8c62-7d0c448e4051")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 66.04 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_SCLK"
+		(shape bidirectional)
+		(at 149.86 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76284f93-23bb-48dd-a03a-a898b7408624")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_SPI2_MISO"
+		(shape bidirectional)
+		(at 129.54 62.23 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "84616f1e-884b-492b-8ae6-089ed89e47d7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 62.23 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_MISO"
+		(shape bidirectional)
+		(at 149.86 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dc8a9194-7367-4d16-a76c-643f6b9ec4a7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_SPI2_MOSI"
+		(shape bidirectional)
+		(at 129.54 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "08d92f3b-269b-4542-adab-2d39530f45d9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 58.42 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_MOSI"
+		(shape bidirectional)
+		(at 149.86 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eb6a9cea-fddc-4cf3-8801-0f36d5a53fff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ESP_SPI2_CS_N"
+		(shape bidirectional)
+		(at 129.54 54.61 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c26c7128-8621-454d-b9f5-f196a3f22e72")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 129.54 54.61 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "NRF_SPI_CSN"
+		(shape bidirectional)
+		(at 149.86 54.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c5c7e422-7a66-4c9f-a88f-656bee9605b6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 149.86 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(text "Seleccion fisica de interfaz"
+		(at 121.92 92.71 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "81282dc7-62d9-4622-80af-7458c6fe1e3f")
+	)
+	(text "SPI fijo (opcion 2): montar SJ201-204 (0R), SJ101-104 en DNP"
+		(at 121.92 90.17 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "cb5374aa-118f-4ae2-840f-a0323acad189")
+	)
+	(text "UART deshabilitado por ensamblaje por defecto"
+		(at 121.92 87.63 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "76f06259-dbdd-488d-b3a9-56090d4e7715")
+	)
+	(text "U3 usa footprint LGA Nordic nRF9160 como base; verificar correspondencia final con nRF9151."
+		(at 121.92 85.09 0)
+		(effects (font (size 1.27 1.27)) (justify left bottom))
+		(uuid "883c4d0b-a57c-4d92-bfb7-c4f79ae4f683")
+	)
+	(sheet_instances
+		(path "/"
+			(page "4")
+		)
+	)
+	(embedded_fonts no)
+)

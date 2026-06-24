@@ -1,0 +1,17 @@
+(footprint "Johanson_1905AT45A0050001E"
+  (layer "F.Cu")
+  (descr "Johanson 1905AT45A0050001E 1880-1930MHz edge antenna")
+  (property "Reference" "AE**" (at 0 -6 90) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Value" "1905AT45A0050001E" (at 0 6 90) (layer "F.Fab") (effects (font (size 1 1) (thickness 0.15))))
+  (property "Datasheet" "https://www.johansontechnology.com/docs/4438/Antenna-1905AT45A0050001E.pdf" (at 0 0 90) (layer "F.Fab") (hide yes) (effects (font (size 1.27 1.27) (thickness 0.15))))
+  (property "Description" "DECT NR+ edge antenna 1880-1920MHz (pi-tunable)" (at 0 0 90) (layer "F.Fab") (hide yes) (effects (font (size 1.27 1.27) (thickness 0.15))))
+  (attr smd)
+  (fp_rect (start -4.75 -0.9) (end 4.75 0.9) (stroke (width 0.12) (type solid)) (fill no) (layer "F.Fab"))
+  (pad "1" smd rect (at -4.5 0 90) (size 0.5 1.9) (layers "F.Cu" "F.Mask" "F.Paste"))
+  (pad "2" smd rect (at 4.5 0 90) (size 0.5 1.9) (layers "F.Cu" "F.Mask" "F.Paste"))
+  (model "${KICAD9_3DMODEL_DIR}/RF_Antenna.3dshapes/Johanson_2450AT43F0100.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 2.2 1.8 1.2))
+    (rotate (xyz 0 0 0))
+  )
+)

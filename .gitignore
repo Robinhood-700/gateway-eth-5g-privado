@@ -1,0 +1,7 @@
+.DS_Store
+**/.DS_Store
+
+firmware/esp32_gateway/build/
+firmware/esp32_gateway/build-uart/
+firmware/esp32_gateway/managed_components/
+firmware/esp32_gateway/sdkconfig.old
