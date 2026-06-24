@@ -1,10 +1,23 @@
 #include <stdio.h>
 
+#include "esp_event.h"
+#include "esp_err.h"
+#include "esp_log.h"
+#include "esp_netif.h"
+#include "esp_system.h"
+#include "nvs_flash.h"
+
+#include "mock_gw_bridge.h"
+#include "mock_gw_dect.h"
+#include "mock_gw_diag.h"
+#include "mock_gw_eth.h"
+#include "mock_gw_watchdog.h"
+
 typedef int esp_err_t;
 
-#define ESP_OK 0
-#define ESP_LOGI(tag, fmt, ...) printf("[INFO] %s: " fmt "\n", tag, ##__VA_ARGS__)
-#define ESP_LOGW(tag, fmt, ...) printf("[WARN] %s: " fmt "\n", tag, ##__VA_ARGS__)
+// #define ESP_OK 0
+// #define ESP_LOGI(tag, fmt, ...) printf("[INFO] %s: " fmt "\n", tag, ##__VA_ARGS__)
+// #define ESP_LOGW(tag, fmt, ...) printf("[WARN] %s: " fmt "\n", tag, ##__VA_ARGS__)
 
 static const char *TAG = "mock_app_main";
 
@@ -23,35 +36,35 @@ static esp_err_t mock_esp_event_loop_create_default(void)
     return ESP_OK;
 }
 
-static esp_err_t mock_gw_eth_init(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_eth_init(void)
+// {
+//     return ESP_OK;
+// }
 
-static esp_err_t mock_gw_dect_init(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_dect_init(void)
+// {
+//     return ESP_OK;
+// }
 
-static esp_err_t mock_gw_dect_healthcheck(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_dect_healthcheck(void)
+// {
+//     return ESP_OK;
+// }
 
-static esp_err_t mock_gw_bridge_start(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_bridge_start(void)
+// {
+//     return ESP_OK;
+// }
 
-static esp_err_t mock_gw_watchdog_start(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_watchdog_start(void)
+// {
+//     return ESP_OK;
+// }
 
-static esp_err_t mock_gw_diag_start(void)
-{
-    return ESP_OK;
-}
+// static esp_err_t mock_gw_diag_start(void)
+// {
+//     return ESP_OK;
+// }
 
 
 void mock_app_main(void)
