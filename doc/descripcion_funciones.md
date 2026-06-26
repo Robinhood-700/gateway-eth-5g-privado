@@ -88,7 +88,6 @@ Introduce manualmente un mensaje DECT para realizar pruebas.
 
 ### Variables globales
 
-* **TAG:** Identificador para el log.
 * **s_rx_cb:** Callback utilizado para entregar los datos recibidos.
 * **s_rx_ctx:** Contexto asociado al callback.
 * **s_at_ok_sem:** Semáforo utilizado durante el healthcheck.
@@ -156,7 +155,6 @@ Simula la recepción de una línea para realizar pruebas.
 
 ### Variables globales
 
-* **TAG:** Identificador utilizado por el sistema de log.
 * **s_eth_rand_seq:** Contador de mensajes Ethernet generados.
 * **s_dect_rand_seq:** Contador de mensajes DECT generados.
 
@@ -244,7 +242,6 @@ Inicializa el sistema de diagnóstico.
 
 ### Variables globales
 
-* **TAG:** Identificador utilizado en los mensajes de log.
 * **s_eth_handle:** Manejador del controlador Ethernet.
 * **s_eth_netif:** Interfaz de red Ethernet.
 * **s_eth_glue:** Unión entre el driver Ethernet y la pila TCP/IP.
@@ -297,10 +294,6 @@ Obtiene la dirección IPv4 actual.
 ---
 
 # gw_json.c
-
-### Variables globales
-
-Este módulo no utiliza variables globales.
 
 ### Funciones
 
