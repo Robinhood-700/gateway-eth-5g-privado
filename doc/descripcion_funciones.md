@@ -317,10 +317,6 @@ Garantiza que la salida tenga formato JSON, convirtiendo los datos cuando es nec
 
 # gw_watchdog.c
 
-### Variables globales
-
-* **TAG:** Identificador utilizado para los mensajes del watchdog.
-
 ### Funciones
 
 #### supervisor_task()
